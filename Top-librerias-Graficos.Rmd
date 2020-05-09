@@ -2,11 +2,11 @@
 title: "Paquetes R útiles para la visualización de datos"
 author: "[Luis Maron](mailto:luisxmaron@gmail.com){target='_blank'}"
 ipsum_meta:
-  twitter_card: "Summary info for the Twitter Card xd :v"
+  twitter_card: "Este Rmarkdown le dará una breve visión general de 15 útiles paquetes de visualización R interdisciplinarios :v twitter"
   twitter_site: "\\@sitehandle"
   twitter_creator: "\\@creatorhandle"
   og_url: "https\\://example.com/open/graph/finalURLfor/this"
-  og_description: "A modest size description of the content xdssdsd lluis luis"
+  og_description: "Este Rmarkdown le dará una breve visión general de 15 útiles paquetes de visualización R interdisciplinarios"
   og_image: "https\\://luisxsuper.github.io/images/favicon.ico"
 output: 
   hrbrthemes::ipsum:
