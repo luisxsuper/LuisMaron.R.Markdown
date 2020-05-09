@@ -1,5 +1,5 @@
 ---
-title: "INSERT_TITLE_HERE"
+title: "Luis El Pro"
 ipsum_meta:
   twitter_card: "Summary info for the Twitter Card"
   twitter_site: "\\@sitehandle"
