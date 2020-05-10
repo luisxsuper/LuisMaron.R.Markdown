@@ -1,11 +1,11 @@
 ---
 title: "Paquetes R útiles para la visualización de datos"
-author: "[Luis Maron](mailto:luisxmaron@gmail.com){target='_blank'}"
+author: "[Luis F. Maron](mailto:luisxmaron@gmail.com){target='_blank'}"
 ipsum_meta:
-  twitter_card: "Este Rmarkdown le dará una breve visión general de 15 útiles paquetes de visualización R interdisciplinarios :v twitter"
+  twitter_card: "summary_large_image"
   twitter_site: "\\@sitehandle"
-  twitter_creator: "\\@creatorhandle"
-  og_url: "https\\://example.com/open/graph/finalURLfor/this"
+  twitter_creator: "\\@luisxmaron"
+  og_url: "https\\://luisxsuper.github.io/LuisMaron.R.Markdown/"
   og_description: "Este Rmarkdown le dará una breve visión general de 15 útiles paquetes de visualización R interdisciplinarios"
   og_image: "https\\://luisxsuper.github.io/images/favicon.ico"
 output: 
@@ -91,6 +91,30 @@ gvisBubbleChart(Fruits, idvar="Fruit", xvar="Sales", yvar="Expenses",
 
 ```
 
+## taucharts
+
+```{r fig.height=4, message=FALSE, warning=FALSE}
+# devtools::install_github("hrbrmstr/taucharts")
+library(taucharts) 
+tc <- tauchart(iris) %>%
+  tau_point("Sepal.Length", c("Species","Petal.Length"), color = "Species") %>% tau_legend() %>% tau_tooltip()
+
+tc %>% tau_trendline()
+```
+
+## metricsgraphics
+
+```{r, results='asis'}
+library(metricsgraphics)
+stocks <- data.frame(
+  time = as.Date(Sys.Date()) + 0:9,
+  X = rnorm(10, 0, 1), Y = rnorm(10, 0, 2), Z = rnorm(10, 0, 4))
+
+stocks %>%
+  mjs_plot(x=time, y=X) %>% mjs_line() %>%
+  mjs_add_line(Y) %>%  mjs_add_line(Z) %>%
+  mjs_axis_x(xax_format="date")
+```
 
 *Si me he perdido alguno de sus paquetes favoritos de datos de R en esta breve lista, ¡hágamelo saber!. [Contactame by Luis Maron](mailto:luisxmaron@gmail.com).*
 
