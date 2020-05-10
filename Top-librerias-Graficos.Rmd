@@ -5,15 +5,30 @@ ipsum_meta:
   twitter_card: "summary_large_image"
   twitter_site: "\\@sitehandle"
   twitter_creator: "\\@luisxmaron"
-  og_url: "https\\://luisxsuper.github.io/LuisMaron.R.Markdown/"
-  og_description: "Este Rmarkdown le dará una breve visión general de 15 útiles paquetes de visualización R interdisciplinarios"
+  og_url: "https\\://luisxsuper.github.io/LuisMaron.R.Markdown/Top-librerias-Graficos.html"
+  og_description: "Este Rmarkdown le dara una breve vision general de 15 utiles paquetes de visualización R interdisciplinarios ☺"
   og_image: "https\\://luisxsuper.github.io/images/favicon.ico"
-output: 
-  hrbrthemes::ipsum:
+output:
+  html_document:
+    theme: cerulean
+    highlight: tango
+    toc_float: true
     toc: true
+    hrbrthemes::ipsum:
+      toc: true
 ---
+
 ```{r include=FALSE}
 knitr::opts_chunk$set(fig.retina=2)
+# hrbrthemes::ipsum:
+    # toc: true
+# html_document:
+    # theme: cosmo
+    # toc_float: true
+# prettydoc::html_pretty:
+    # thmeme: hpstr
+# rmdformats::html_clean: ###
+# tint::tintHtml:
 ```
 
 ```{r ipsum_setup, message=FALSE, warning=FALSE, cache=FALSE, echo=FALSE}
@@ -37,7 +52,7 @@ Mi lista de paquetes R para datos:
 * [ggplot2 - CRAN](http://ggplot2.org/)
 
 #### Ejemplito: 
-```{r fig.show='hold', message=F, warning=F}
+```{r fig.show='hold', message=F, warning=F, preview=TRUE}
 library(ggplot2)
 ggplot(iris, aes(Sepal.Length, Petal.Length, col = Species)) +
   geom_point() + labs(title="El titulo xD") + theme_ipsum_rc(grid="XY")
